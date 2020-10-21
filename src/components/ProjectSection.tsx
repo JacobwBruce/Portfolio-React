@@ -1,8 +1,10 @@
 import React, { FC } from 'react';
-import image from '../images/array-project.png';
 import Project from './Project';
+import { projects } from '../data/projects.json';
 
 const ProjectSection: FC = () => {
+    console.log(projects);
+    console.log(`require(${projects[0].image})`);
     return (
         <section className='page-section portfolio' id='portfolio'>
             <div className='container'>
@@ -19,13 +21,15 @@ const ProjectSection: FC = () => {
                     <div className='divider-custom-line'></div>
                 </div>
                 <div className='row justify-content-center'>
-                    <Project
-                        id='0'
-                        name='Array Sorting Visualizer'
-                        description='Testing'
-                        url='https://google.com'
-                        image={image}
-                    />
+                    {projects.map((project, index) => (
+                        <Project
+                            id={index.toString()}
+                            name={project.name}
+                            description={project.description}
+                            url={project.url}
+                            image={require(`../images/${project.image}`)}
+                        />
+                    ))}
                 </div>
             </div>
         </section>
