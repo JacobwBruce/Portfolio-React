@@ -1,0 +1,11 @@
+.project-link {
+    color: white;
+}
+
+.project-btn:hover {
+    background: white !important;
+}
+
+.project-btn:hover .project-link {
+    color: black;
+}
