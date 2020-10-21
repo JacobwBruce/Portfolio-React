@@ -3,8 +3,6 @@ import Project from './Project';
 import { projects } from '../data/projects.json';
 
 const ProjectSection: FC = () => {
-    console.log(projects);
-    console.log(`require(${projects[0].image})`);
     return (
         <section className='page-section portfolio' id='portfolio'>
             <div className='container'>
@@ -23,6 +21,7 @@ const ProjectSection: FC = () => {
                 <div className='row justify-content-center'>
                     {projects.map((project, index) => (
                         <Project
+                            key={`project${index}`}
                             id={index.toString()}
                             name={project.name}
                             description={project.description}
