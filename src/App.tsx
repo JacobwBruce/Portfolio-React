@@ -10,6 +10,7 @@ import './css/TemplateStyles.css';
 import './css/body.css';
 import './css/heading.css';
 import EmailForm from './components/EmailForm';
+import axios from 'axios';
 
 function App() {
     const [emailData, setEmailData] = useState({
@@ -17,6 +18,8 @@ function App() {
         email: '',
         message: '',
     });
+    const [loading, setLoading] = useState(false);
+    const [emailResponse, setEmailResponse] = useState({});
 
     const handleChange = (e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -26,10 +29,16 @@ function App() {
         });
     };
 
-    const sendEmail = (e: FormEvent<HTMLFormElement>) => {
+    const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log(emailData);
-        return '';
+        setLoading(true);
+        try {
+            const { data } = await axios.post('/sendEmail', emailData);
+            setEmailResponse({ ...data, sent: true });
+        } catch (err) {
+            setEmailResponse({ sent: true, error: true });
+        }
+        setLoading(false);
     };
 
     return (
@@ -39,7 +48,13 @@ function App() {
             <ProjectSection />
             <AboutSection />
             <ContactSection />
-            <EmailForm emailData={emailData} handleChange={handleChange} sendEmail={sendEmail} />
+            <EmailForm
+                emailData={emailData}
+                handleChange={handleChange}
+                sendEmail={sendEmail}
+                loading={loading}
+                emailResponse={emailResponse}
+            />
             <Footer />
         </div>
     );

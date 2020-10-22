@@ -1,0 +1,9 @@
+.Loader {
+    height: 424px;
+}
+
+.Loader img {
+    display: block;
+    margin: auto;
+    height: 200px;
+}
