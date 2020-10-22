@@ -1,0 +1,22 @@
+.EmailForm {
+    display: block;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.email-button {
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .EmailForm {
+        width: 60%;
+    }
+}
+
+@media (max-width: 600px) {
+    .EmailForm {
+        width: 80%;
+    }
+}
