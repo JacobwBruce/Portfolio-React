@@ -32,9 +32,11 @@ function App() {
     const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setLoading(true);
-        //https://nodejs-emailing-bot.herokuapp.com/sendEmail
         try {
-            const { data } = await axios.post('http://127.0.0.1:5000/sendEmail', emailData);
+            const { data } = await axios.post(
+                'https://nodejs-emailing-bot.herokuapp.com/sendEmail',
+                emailData
+            );
             setEmailResponse({ ...data, sent: true });
             setEmailData({
                 name: '',
