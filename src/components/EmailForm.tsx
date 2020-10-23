@@ -29,7 +29,12 @@ const EmailForm: FC<Props> = ({ emailData, sendEmail, handleChange, loading, ema
                             using the phone number or email address above
                         </p>
                     ) : (
-                        <h4 className='text-center m-4'>Email Sent 🚀</h4>
+                        <h4 className='text-center m-4'>
+                            Email Sent{' '}
+                            <span role='img' aria-label='rocket'>
+                                🚀
+                            </span>
+                        </h4>
                     )}
                 </div>
             )}
