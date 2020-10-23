@@ -35,6 +35,11 @@ function App() {
         try {
             const { data } = await axios.post('/sendEmail', emailData);
             setEmailResponse({ ...data, sent: true });
+            setEmailData({
+                name: '',
+                email: '',
+                message: '',
+            });
         } catch (err) {
             setEmailResponse({ sent: true, error: true });
         }
