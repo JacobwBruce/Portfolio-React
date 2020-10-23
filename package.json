@@ -1,6 +1,5 @@
 {
     "name": "portfolio",
-    "proxy": "https://nodejs-emailing-bot.herokuapp.com",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
