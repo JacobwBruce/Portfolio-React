@@ -34,7 +34,7 @@ function App() {
         setLoading(true);
         try {
             const { data } = await axios.post(
-                'https://nodejs-emailing-bot.herokuapp.com/sendEmail',
+                'https://nodejs-emailing-bot.herokuapp.com/sendPortfolioEmail',
                 emailData
             );
             setEmailResponse({ ...data, sent: true });
