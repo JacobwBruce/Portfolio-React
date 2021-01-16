@@ -1,6 +1,18 @@
 {
     "projects": [
         {
+            "name": "Imageify",
+            "description": "Fullstask web application that uses React, Node.js, and Firebase to allow users to login/register, and upload images to a public repository. Also allows users to delete, and update images they created, and search for particular images",
+            "url": "https://image-repo.netlify.app/",
+            "image": "Imageify.png"
+        },
+        {
+            "name": "The Shoppies",
+            "description": "React web application that allows users to search for and nominate 5 movies, as well as allowing users to see the total amount of votes for the 5 most popular movies. Made for the Shopify intern application challenge",
+            "url": "https://the-shoppies-jacobbruce.netlify.app/",
+            "image": "TheShoppies.png"
+        },
+        {
             "name": "Array Sorting Visualizer",
             "description": "React.js application that generates an array and visualizes the array by using bars of different heights. It then visualizes how the merge sorting algorithm works.",
             "url": "https://jacobwbruce.github.io/Array-Sorting-Visualizer/",
