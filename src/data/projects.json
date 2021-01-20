@@ -2,7 +2,7 @@
     "projects": [
         {
             "name": "Imageify",
-            "description": "Fullstask web application that uses React, Node.js, and Firebase to allow users to login/register, and upload images to a public repository. Also allows users to delete, and update images they created, and search for particular images",
+            "description": "Full-stack web application that uses React, Node.js, and Firebase to allow users to login/register, and upload images to a public repository. Also allows users to delete, and update images they created, and search for particular images",
             "url": "https://image-repo.netlify.app/",
             "image": "Imageify.png"
         },
