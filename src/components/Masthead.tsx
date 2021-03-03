@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import avatar from '../images/avataaars.svg';
-import './css/Masthead.css';
+import '../css/Masthead.css';
 
 const Masthead: FC = () => {
     return (
