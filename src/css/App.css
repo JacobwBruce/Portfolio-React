@@ -13,7 +13,8 @@ body,
 #root,
 .App {
     font-family: 'Quicksand', sans-serif;
-    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .light-theme {
@@ -24,4 +25,8 @@ body,
 .dark-theme {
     color: var(--text-light);
     background-color: var(--dark-color);
+}
+
+.primary-color-text {
+    color: var(--primary-color);
 }
