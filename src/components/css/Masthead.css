@@ -22,6 +22,10 @@
     padding: 5px 20px;
 }
 
+.Masthead-cth {
+    font-size: 1.5rem;
+}
+
 @media (max-width: 992px) {
     .Masthead-text {
         padding: 0 10px;

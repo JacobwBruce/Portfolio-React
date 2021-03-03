@@ -20,7 +20,7 @@ const Masthead: FC = () => {
                     </p>
                 </h1>
             </div>
-            <div className='text-center lead'>
+            <div className='text-center lead Masthead-cth '>
                 <p>
                     Want to work together? <button className='Masthead-button'>Yes!</button>
                 </p>
