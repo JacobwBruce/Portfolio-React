@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;600&display=swap');
+
+:root {
+    --primary-color: #007bff;
+    --light-color: #fafafa;
+    --dark-color: #171c28;
+    --text-light: #e7e7e7;
+    --text-dark: #444452;
+}
+
+html,
+body,
+#root,
+.App {
+    font-family: 'Quicksand', sans-serif;
+    height: 100%;
+}
+
+.light-theme {
+    color: var(--text-dark);
+    background-color: var(--light-color);
+}
+
+.dark-theme {
+    color: var(--text-light);
+    background-color: var(--dark-color);
+}
