@@ -4,6 +4,7 @@ import Masthead from './components/Masthead';
 import './css/App.css';
 import { WiDaySunny, WiMoonWaningCrescent3 } from 'react-icons/wi';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
     const [isDarkTheme, setDarkTheme] = useState(
@@ -20,6 +21,7 @@ function App() {
             <Masthead />
             <About />
             <Contact />
+            <Footer />
 
             <div className='fixed-top'>
                 {!isDarkTheme ? (
