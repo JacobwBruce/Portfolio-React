@@ -72,6 +72,7 @@ const EmailForm: FC = () => {
                     </div>
                     <div className='mb-3'>
                         <textarea
+                            placeholder='Message'
                             className='form-control'
                             id='message-TextArea'
                             cols={30}

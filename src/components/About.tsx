@@ -3,14 +3,14 @@ import '../css/About.css';
 
 const About: FC = () => {
     return (
-        <div className='container mt-5 About'>
+        <div className='container my-5 About d-grid justify-content-center'>
             <h2 className='primary-color-text text-center'>About</h2>
             <div className='About-content px-5'>
                 <p>
                     Second year student of the Software development and Network Engineering COOP
                     program at Sheridan College, with a high overall GPA.
                 </p>
-                <p className='m-0'>
+                <p>
                     Skilled in backend development with Python, Node.js, Java, C# and .NET.
                     Proficient in front development with HTML5, CSS3, JavaScript and React.js.
                 </p>
