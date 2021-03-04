@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import avatar from '../images/avataaars.svg';
 import '../css/Masthead.css';
+import { Link } from 'react-scroll';
 
 const Masthead: FC = () => {
     return (
@@ -16,13 +17,16 @@ const Masthead: FC = () => {
                     </p>
                     <p>
                         I'm <span className='name'>Jacob Bruce</span>, a software engineering
-                        student at Sheridan College
+                        student at <strong>Sheridan College</strong>
                     </p>
                 </h1>
             </div>
             <div className='text-center lead Masthead-cth '>
                 <p>
-                    Want to work together? <button className='Masthead-button'>Yes!</button>
+                    <span className='mx-3'>Want to work together?</span>
+                    <Link to='contact' smooth={true} duration={200}>
+                        <button className='Masthead-button'>Yes!</button>
+                    </Link>
                 </p>
             </div>
         </div>

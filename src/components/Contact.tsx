@@ -3,7 +3,7 @@ import EmailForm from './EmailForm';
 
 const Contact: FC = () => {
     return (
-        <div className='container text-center mb-5'>
+        <div className='container text-center mb-5' id='contact'>
             <h2 className='primary-color-text mb-5'>Contact</h2>
 
             <div className='mb-5'>
