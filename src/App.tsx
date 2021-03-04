@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import About from './components/About';
 import Masthead from './components/Masthead';
 import './css/App.css';
@@ -14,16 +14,6 @@ function App() {
         setDarkTheme(!isDarkTheme);
         window.localStorage.setItem('theme', JSON.stringify(!isDarkTheme));
     };
-
-    useEffect(() => {
-        if (
-            !JSON.parse(window.localStorage.getItem('theme')!) &&
-            window.matchMedia &&
-            window.matchMedia('(prefers-color-scheme: dark)').matches
-        ) {
-            changeTheme();
-        }
-    }, []);
 
     return (
         <div className={`App ${isDarkTheme ? 'dark-theme' : 'light-theme'}`}>
