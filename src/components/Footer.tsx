@@ -45,7 +45,7 @@ const Footer: FC = () => {
             </footer>
             <section className='copyright py-4 text-center'>
                 <div className='container'>
-                    <small className='pre-wrap'>Copyright © jacobbruce.ca 2020</small>
+                    <small className='pre-wrap'>Copyright © jacobbruce.ca 2021</small>
                 </div>
             </section>
         </>

@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { ChangeEvent, FC, FormEvent, useState } from 'react';
 import '../css/EmailForm.css';
 import Loader from './Loader';
+import { ToastsContainer, ToastsContainerPosition, ToastsStore } from 'react-toasts';
 
 const EmailForm: FC = () => {
     const [emailData, setEmailData] = useState({
@@ -10,7 +11,6 @@ const EmailForm: FC = () => {
         message: '',
     });
     const [loading, setLoading] = useState(false);
-    const [emailResponse, setEmailResponse] = useState<any>({});
 
     const handleChange = (e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -24,41 +24,25 @@ const EmailForm: FC = () => {
         e.preventDefault();
         setLoading(true);
         try {
-            const { data } = await axios.post(
+            await axios.post(
                 'https://nodejs-emailing-bot.herokuapp.com/sendPortfolioEmail',
                 emailData
             );
-            setEmailResponse({ ...data, sent: true });
             setEmailData({
                 name: '',
                 email: '',
                 message: '',
             });
+            ToastsStore.success('Email Sent! 🚀', 5000);
         } catch (err) {
-            setEmailResponse({ sent: true, error: true });
+            ToastsStore.error('There was an error sending your email', 8000);
         }
         setLoading(false);
     };
 
     return (
         <div className='EmailForm'>
-            {emailResponse.sent && (
-                <div>
-                    {emailResponse.error ? (
-                        <p className='text-center m-4' style={{ color: 'red' }}>
-                            There was an error sending your email, please try again or contact me
-                            using the phone number or email address above
-                        </p>
-                    ) : (
-                        <h4 className='text-center m-4'>
-                            Email Sent{' '}
-                            <span role='img' aria-label='rocket'>
-                                🚀
-                            </span>
-                        </h4>
-                    )}
-                </div>
-            )}
+            <ToastsContainer store={ToastsStore} position={ToastsContainerPosition.BOTTOM_RIGHT} />
 
             {loading ? (
                 <Loader />
