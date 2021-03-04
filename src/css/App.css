@@ -28,6 +28,17 @@ body,
     background-color: var(--dark-color);
 }
 
+.dark-theme input,
+.dark-theme textarea {
+    background-color: #1f232c;
+    color: var(--text-light);
+}
+.dark-theme input:focus,
+.dark-theme textarea:focus {
+    background-color: #1f232c;
+    color: var(--text-light);
+}
+
 .primary-color-text {
     color: var(--primary-color);
 }

@@ -4,7 +4,7 @@ import '../css/About.css';
 const About: FC = () => {
     return (
         <div className='container mt-5 About'>
-            <h2 className='primary-color-text text-center text-decoration-underline'>About</h2>
+            <h2 className='primary-color-text text-center'>About</h2>
             <div className='About-content px-5'>
                 <p>
                     Second year student of the Software development and Network Engineering COOP
