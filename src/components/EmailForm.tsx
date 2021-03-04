@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { ChangeEvent, FC, FormEvent, useState } from 'react';
 import '../css/EmailForm.css';
+import Loader from './Loader';
 
 const EmailForm: FC = () => {
     const [emailData, setEmailData] = useState({
@@ -60,9 +61,7 @@ const EmailForm: FC = () => {
             )}
 
             {loading ? (
-                <div className='spinner-border' role='status'>
-                    <span className='visually-hidden'>Loading...</span>
-                </div>
+                <Loader />
             ) : (
                 <form className='EmailForm' onSubmit={sendEmail}>
                     <div className='mb-3'>
