@@ -1,49 +1,54 @@
-import React, { ChangeEvent, FC, FormEvent } from 'react';
-import './css/EmailForm.css';
-import Loading from './Loader';
+import axios from 'axios';
+import React, { ChangeEvent, FC, FormEvent, useState } from 'react';
+import '../css/EmailForm.css';
+import Loader from './Loader';
+import { ToastsContainer, ToastsContainerPosition, ToastsStore } from 'react-toasts';
 
-interface Props {
-    emailData: {
-        name: string;
-        email: string;
-        message: string;
+const EmailForm: FC = () => {
+    const [emailData, setEmailData] = useState({
+        name: '',
+        email: '',
+        message: '',
+    });
+    const [loading, setLoading] = useState(false);
+
+    const handleChange = (e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setEmailData({
+            ...emailData,
+            [name]: value,
+        });
     };
-    loading: boolean;
-    handleChange(e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>): void;
-    sendEmail(e: FormEvent<HTMLFormElement>): void;
-    emailResponse: any;
-}
 
-const EmailForm: FC<Props> = ({ emailData, sendEmail, handleChange, loading, emailResponse }) => {
+    const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        setLoading(true);
+        try {
+            await axios.post(
+                'https://nodejs-emailing-bot.herokuapp.com/sendPortfolioEmail',
+                emailData
+            );
+            setEmailData({
+                name: '',
+                email: '',
+                message: '',
+            });
+            ToastsStore.success('Email Sent! 🚀', 5000);
+        } catch (err) {
+            ToastsStore.error('There was an error sending your email', 8000);
+        }
+        setLoading(false);
+    };
+
     return (
-        <>
-            <div>
-                <h3 className='text-center'>Contact Form</h3>
-            </div>
-
-            {emailResponse.sent && (
-                <div>
-                    {emailResponse.error ? (
-                        <p className='text-center m-4' style={{ color: 'red' }}>
-                            There was an error sending your email, please try again or contact me
-                            using the phone number or email address above
-                        </p>
-                    ) : (
-                        <h4 className='text-center m-4'>
-                            Email Sent{' '}
-                            <span role='img' aria-label='rocket'>
-                                🚀
-                            </span>
-                        </h4>
-                    )}
-                </div>
-            )}
+        <div className='EmailForm'>
+            <ToastsContainer store={ToastsStore} position={ToastsContainerPosition.BOTTOM_RIGHT} />
 
             {loading ? (
-                <Loading />
+                <Loader />
             ) : (
                 <form className='EmailForm' onSubmit={sendEmail}>
-                    <div className='form-group'>
+                    <div className='mb-3'>
                         <input
                             className='form-control'
                             type='text'
@@ -54,7 +59,7 @@ const EmailForm: FC<Props> = ({ emailData, sendEmail, handleChange, loading, ema
                             name='name'
                         />
                     </div>
-                    <div className='form-group'>
+                    <div className='mb-3'>
                         <input
                             className='form-control'
                             type='email'
@@ -65,8 +70,9 @@ const EmailForm: FC<Props> = ({ emailData, sendEmail, handleChange, loading, ema
                             name='email'
                         />
                     </div>
-                    <div className='form-group'>
+                    <div className='mb-3'>
                         <textarea
+                            placeholder='Message'
                             className='form-control'
                             id='message-TextArea'
                             cols={30}
@@ -76,14 +82,14 @@ const EmailForm: FC<Props> = ({ emailData, sendEmail, handleChange, loading, ema
                             name='message'
                         ></textarea>
                     </div>
-                    <div className='form-group'>
+                    <div className='mb-3'>
                         <button type='submit' className='btn btn-primary email-button'>
                             Submit
                         </button>
                     </div>
                 </form>
             )}
-        </>
+        </div>
     );
 };
 

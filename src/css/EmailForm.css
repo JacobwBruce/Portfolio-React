@@ -1,0 +1,21 @@
+.EmailForm {
+    width: 700px;
+}
+
+@media (max-width: 900px) {
+    .EmailForm {
+        width: 600px;
+    }
+}
+
+@media (max-width: 700px) {
+    .EmailForm {
+        width: 450px;
+    }
+}
+
+@media (max-width: 500px) {
+    .EmailForm {
+        width: auto;
+    }
+}

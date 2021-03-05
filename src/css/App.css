@@ -1,10 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;600&display=swap');
+
 :root {
-    /* --background-primary: #1f2d41;
-    --background-secondary: #ef233c;
-    --footer-background: #d00f27; */
-    --background-primary: #3083dc;
-    --background-secondary: #011627;
-    --footer-background: #040c13;
+    --primary-color: #007bff;
+    --light-color: #fafafa;
+    --dark-color: #171c28;
+    --text-light: #e7e7e7;
+    --text-dark: #444452;
 }
 
-/* 291f1e */
+html,
+body,
+#root,
+.App {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: 0.5s;
+}
+
+.light-theme {
+    color: var(--text-dark);
+    background-color: var(--light-color);
+}
+
+.dark-theme {
+    color: var(--text-light);
+    background-color: var(--dark-color);
+}
+
+.dark-theme input,
+.dark-theme textarea {
+    background-color: #1f232c;
+    color: var(--text-light);
+}
+.dark-theme input:focus,
+.dark-theme textarea:focus {
+    background-color: #1f232c;
+    color: var(--text-light);
+}
+
+.primary-color-text {
+    color: var(--primary-color);
+}
+
+.section-title {
+    font-weight: 600;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}

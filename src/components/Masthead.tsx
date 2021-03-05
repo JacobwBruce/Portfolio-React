@@ -1,24 +1,35 @@
 import React, { FC } from 'react';
 import avatar from '../images/avataaars.svg';
+import '../css/Masthead.css';
+import { Link } from 'react-scroll';
 
 const Masthead: FC = () => {
     return (
-        <header className='masthead bg-primary text-white text-center'>
-            <div className='container d-flex align-items-center flex-column'>
-                <img className='masthead-avatar mb-5' src={avatar} alt='' />
-                <h1 className='masthead-heading mb-0'>JACOB BRUCE</h1>
-                <div className='divider-custom divider-light'>
-                    <div className='divider-custom-line'></div>
-                    <div className='divider-custom-icon'>
-                        <i className='fas fa-star'></i>
-                    </div>
-                    <div className='divider-custom-line'></div>
-                </div>
-                <p className='text-center masthead-subheading font-weight-light mb-0'>
-                    Full Stack Software Engineer
+        <div className='Masthead container'>
+            <div className='Masthead-content d-flex justify-content-center align-items-md-center align-items-sm-start flex-wrap'>
+                <img className='px-3' src={avatar} alt='Me' />
+                <h1 className='Masthead-text'>
+                    <p>
+                        Hello{' '}
+                        <span role='img' aria-label='wave-emoji'>
+                            👋
+                        </span>
+                    </p>
+                    <p>
+                        I'm <span className='name'>Jacob Bruce</span>, a software engineering
+                        student at <strong>Sheridan College</strong>
+                    </p>
+                </h1>
+            </div>
+            <div className='text-center lead Masthead-cth '>
+                <p>
+                    <span className='mx-3'>Want to work together?</span>
+                    <Link to='contact' smooth={true} duration={200}>
+                        <button className='Masthead-button'>Yes!</button>
+                    </Link>
                 </p>
             </div>
-        </header>
+        </div>
     );
 };
 
