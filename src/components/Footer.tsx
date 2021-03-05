@@ -8,7 +8,7 @@ const Footer: FC = () => {
         <>
             <footer className='footer text-center'>
                 <div className='container'>
-                    <div className='row'>
+                    <div className='row px-5'>
                         <div className='col-lg-6 mb-5 mb-lg-0'>
                             <h4 className='mb-4'>LOCATION</h4>
                             <p className='pre-wrap lead mb-0'>Toronto and surrounding area</p>

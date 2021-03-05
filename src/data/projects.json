@@ -1,64 +1,39 @@
 {
     "projects": [
         {
-            "name": "Imageify",
-            "description": "Full-stack web application that uses React, Node.js, and Firebase to allow users to login/register, and upload images to a public repository. Also allows users to delete, and update images they created, and search for particular images",
-            "url": "https://image-repo.netlify.app/",
-            "image": "Imageify.png"
-        },
-        {
             "name": "The Shoppies",
-            "description": "React web application that allows users to search for and nominate 5 movies, as well as allowing users to see the total amount of votes for the 5 most popular movies. Made for the Shopify intern application challenge",
-            "url": "https://the-shoppies-jacobbruce.netlify.app/",
-            "image": "TheShoppies.png"
-        },
-        {
-            "name": "Array Sorting Visualizer",
-            "description": "React.js application that generates an array and visualizes the array by using bars of different heights. It then visualizes how the merge sorting algorithm works.",
-            "url": "https://jacobwbruce.github.io/Array-Sorting-Visualizer/",
-            "image": "array-project.png"
+            "description": "React web application that allows users to search for and nominate 5 movies, as well as allowing users to see the total amount of votes for the 5 most popular movies. Made for the Shopify intern application challenge.",
+            "url": "https://the-shoppies-jacobbruce.netlify.app/"
         },
         {
             "name": "Lights Out Game",
             "description": "Based on the 1995 game by Tiger Electronics, the user must turn off all lights on the board by clicking them, but this will also change the lights next to it. This application is made using React.js.",
-            "url": "https://jacobwbruce.github.io/lights-out/",
-            "image": "lights-project.png"
+            "url": "https://jacobwbruce.github.io/lights-out/"
         },
         {
             "name": "Node.js Recipe App",
             "description": "A Node.js and Express.js web app that allows a user to search through a recipe API from themealdb.com, archive certain recipes they like and have the list of ingredients emailed to the for convenience when shopping.",
-            "url": "https://nodejs-recipe-app.herokuapp.com/",
-            "image": "recipes-app.png"
+            "url": "https://nodejs-recipe-app.herokuapp.com/"
         },
         {
             "name": "React Colors App",
             "description": "A responsive React.js Application built using React-routes that imitates other popular color websites. Allows users to copy color values from a series of pre-built palettes, users can also make new palettes that will save to the window local storage.",
-            "url": "https://jacobwbruce.github.io/react-color-app/",
-            "image": "colors-project.jpeg"
+            "url": "https://jacobwbruce.github.io/react-color-app/"
         },
         {
             "name": "Co-op Web App",
             "description": "A React.js and Firebase.io application I made for myself that allows a user to login using their google account and enter records into a database pertaining to job applications. Uses authentication, and Firebase.io's firestore so a user can view the records only they have entered from any device.",
-            "url": "https://sheridan-coop.web.app/",
-            "image": "coop-web-app.png"
-        },
-        {
-            "name": "React Weather App",
-            "description": "A React.js application to retrieve weather information from a REST API and display data to the user using React state, background changes depending on the tempeture",
-            "url": "https://jacobwbruce.github.io/weather/",
-            "image": "weather-project.png"
+            "url": "https://sheridan-coop.web.app/"
         },
         {
             "name": "Crypo Currency Dashboard",
-            "description": "A React.js Application using React Context that graphs the historic value of cryptocurrency to a user. It uses localStorage so that a user can come back at anytime and view the same coins they favourited",
-            "url": "https://jacobwbruce.github.io/crypto-dashboard/",
-            "image": "cryptodash.png"
+            "description": "A React.js Application using React Context that graphs the historic value of cryptocurrency to a user. It uses localStorage so that a user can come back at anytime and view the same coins they favourited.",
+            "url": "https://jacobwbruce.github.io/crypto-dashboard/"
         },
         {
             "name": "IP-Tracker",
-            "description": "A React.js application that allows users to search for an IP address or domain address and see the physical location if it",
-            "url": "https://jacobwbruce.github.io/ip-tracker/",
-            "image": "IP-Tracker.png"
+            "description": "A React.js application that allows users to search for an IP address or domain address and see the physical location if it.",
+            "url": "https://jacobwbruce.github.io/ip-tracker/"
         }
     ]
 }

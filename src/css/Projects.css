@@ -1,0 +1,10 @@
+.Project-title {
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .Project,
+    .Featured {
+        padding: 0 15px;
+    }
+}

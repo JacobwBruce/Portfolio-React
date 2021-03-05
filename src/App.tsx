@@ -5,6 +5,7 @@ import './css/App.css';
 import { WiDaySunny, WiMoonWaningCrescent3 } from 'react-icons/wi';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Projects from './components/Projects';
 
 function App() {
     const [isDarkTheme, setDarkTheme] = useState(
@@ -20,6 +21,7 @@ function App() {
         <div className={`App ${isDarkTheme ? 'dark-theme' : 'light-theme'}`}>
             <Masthead />
             <About />
+            <Projects />
             <Contact />
             <Footer />
 

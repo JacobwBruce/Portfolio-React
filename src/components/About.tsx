@@ -5,7 +5,7 @@ const About: FC = () => {
     return (
         <div className='container my-5 About d-grid justify-content-center'>
             <h2 className='primary-color-text text-center'>About</h2>
-            <div className='About-content px-5'>
+            <div className='About-content'>
                 <p>
                     Second year student of the Software development and Network Engineering COOP
                     program at Sheridan College, with a high overall GPA.
