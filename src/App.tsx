@@ -8,6 +8,10 @@ import Footer from './components/Footer';
 import Projects from './components/Projects';
 
 function App() {
+    if (JSON.parse(window.localStorage.getItem('theme')!) === 'dark') {
+        window.localStorage.removeItem('theme');
+    }
+
     let defaultTheme = false;
     if (window.localStorage.getItem('theme') !== null) {
         defaultTheme = JSON.parse(window.localStorage.getItem('theme')!);
