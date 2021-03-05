@@ -8,9 +8,11 @@ import Footer from './components/Footer';
 import Projects from './components/Projects';
 
 function App() {
-    const [isDarkTheme, setDarkTheme] = useState(
-        JSON.parse(window.localStorage.getItem('theme')!) || false
-    );
+    let defaultTheme = false;
+    if (window.localStorage.getItem('theme') !== null) {
+        defaultTheme = JSON.parse(window.localStorage.getItem('theme')!);
+    }
+    const [isDarkTheme, setDarkTheme] = useState(defaultTheme);
 
     const changeTheme = () => {
         setDarkTheme(!isDarkTheme);
