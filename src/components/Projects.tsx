@@ -7,7 +7,7 @@ import { FiExternalLink } from 'react-icons/fi';
 const Projects: FC = () => {
     return (
         <div className='container my-5 About d-grid justify-content-center'>
-            <h2 className='primary-color-text text-center mb-5'>Projects</h2>
+            <h2 className='section-title'>Projects</h2>
 
             <div className='Featured'>
                 <div className='row justify-content-center'>

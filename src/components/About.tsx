@@ -4,25 +4,26 @@ import '../css/About.css';
 const About: FC = () => {
     return (
         <div className='container my-5 About d-grid justify-content-center'>
-            <h2 className='primary-color-text text-center'>About</h2>
+            <h2 className='section-title'>About</h2>
             <div className='About-content'>
                 <p>
-                    Second year student of the Software development and Network Engineering COOP
-                    program at Sheridan College, with a high overall GPA.
+                    I'm a third year student of the Software Development and Network Engineering
+                    COOP program at Sheridan College, with a high overall GPA.
                 </p>
+
                 <p>
-                    Skilled in backend development with Python, Node.js, Java, C# and .NET.
-                    Proficient in front development with HTML5, CSS3, JavaScript and React.js.
+                    I recently worked as a <strong>Java Learning Assitant</strong> with Sheridan
+                    College, where I got the oppurtunity to teach and aid students in their
+                    programming course, predominately in <strong>Java</strong> and{' '}
+                    <strong>Spring Boot</strong>. Through coaching and collaboration with students
+                    and college faculty I supported the development of an improved online learning
+                    experience.
                 </p>
+
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint consectetur atque
-                    rerum earum similique, molestiae eligendi iure laborum cum minus suscipit
-                    dolorem, excepturi libero quo eos hic quos. Suscipit, rem?
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quo aut
-                    facilis provident a unde earum ducimus dignissimos doloribus voluptate. Soluta
-                    qui nobis earum. Saepe consequatur qui hic magnam tempora.
+                    I also enjoying breaking things in <strong>TypeScript, Java, Python,</strong>{' '}
+                    and <strong>C#</strong>, and do most of my projects with <strong>React</strong>{' '}
+                    and <strong>Node.js</strong> (including this one).
                 </p>
             </div>
         </div>
