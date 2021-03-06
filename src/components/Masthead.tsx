@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import avatar from '../images/avataaars.svg';
 import '../css/Masthead.css';
 import { Link } from 'react-scroll';
 
@@ -7,7 +6,11 @@ const Masthead: FC = () => {
     return (
         <div className='Masthead container'>
             <div className='Masthead-content d-flex justify-content-center align-items-md-center align-items-sm-start flex-wrap'>
-                <img className='px-3' src={avatar} alt='Me' />
+                <img
+                    className='px-3'
+                    src={`${process.env.PUBLIC_URL}/images/avataaars.svg`}
+                    alt='Me'
+                />
                 <h1 className='Masthead-text'>
                     <p>
                         Hello{' '}

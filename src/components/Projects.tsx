@@ -3,15 +3,8 @@ import { projects } from '../data/projects.json';
 import { features } from '../data/features.json';
 import '../css/Projects.css';
 import { FiExternalLink } from 'react-icons/fi';
-import ArrayPhoto from '../images/Array.png';
-import WeatherPhoto from '../images/Weather.png';
-import ImageifyPhoto from '../images/Imageify.png';
 
 const Projects: FC = () => {
-    features[0].image = ImageifyPhoto;
-    features[1].image = ArrayPhoto;
-    features[2].image = WeatherPhoto;
-
     return (
         <div className='container my-5 About d-grid justify-content-center'>
             <h2 className='section-title'>Projects</h2>
@@ -28,7 +21,11 @@ const Projects: FC = () => {
                         key={`feature-${index}`}
                     >
                         <div className='col-12 col-md-5'>
-                            <img className='img-fluid' src={feature.image} alt={feature.name} />
+                            <img
+                                className='img-fluid'
+                                src={`${process.env.PUBLIC_URL}/images/${feature.image}`}
+                                alt={feature.name}
+                            />
                         </div>
                         <div className='col-12 col-md-4'>
                             <h4 className='Project-title my-3'>{feature.name}</h4>
