@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
-import '../css/Masthead.css';
 import { Link } from 'react-scroll';
+import { motion } from 'framer-motion';
+import '../css/Masthead.css';
 
 const Masthead: FC = () => {
     return (
@@ -28,7 +29,16 @@ const Masthead: FC = () => {
                 <p>
                     <span className='mx-3'>Want to work together?</span>
                     <Link to='contact' smooth={true} duration={200}>
-                        <button className='Masthead-button'>Yes!</button>
+                        <motion.button
+                            className='Masthead-button'
+                            animate={{ rotate: 0 }}
+                            whileHover={{
+                                rotate: [5, -5, 5, -5, 0],
+                                transition: { duration: 0.5 },
+                            }}
+                        >
+                            Yes!
+                        </motion.button>
                     </Link>
                 </p>
             </div>

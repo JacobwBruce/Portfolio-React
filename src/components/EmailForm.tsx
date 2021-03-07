@@ -1,8 +1,9 @@
 import axios from 'axios';
 import React, { ChangeEvent, FC, FormEvent, useState } from 'react';
-import '../css/EmailForm.css';
 import Loader from './Loader';
 import { ToastsContainer, ToastsContainerPosition, ToastsStore } from 'react-toasts';
+import { motion } from 'framer-motion';
+import '../css/EmailForm.css';
 
 const EmailForm: FC = () => {
     const [emailData, setEmailData] = useState({
@@ -83,9 +84,17 @@ const EmailForm: FC = () => {
                         ></textarea>
                     </div>
                     <div className='mb-3'>
-                        <button type='submit' className='btn btn-primary email-button'>
+                        <motion.button
+                            animate={{ rotate: 0 }}
+                            whileHover={{
+                                rotate: [5, -5, 5, -5, 0],
+                                transition: { duration: 0.5 },
+                            }}
+                            type='submit'
+                            className='btn btn-primary email-button'
+                        >
                             Submit
-                        </button>
+                        </motion.button>
                     </div>
                 </form>
             )}
