@@ -4,24 +4,20 @@ import Masthead from './components/Masthead';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Projects from './components/Projects';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, useViewportScroll } from 'framer-motion';
 import { WiDaySunny, WiMoonWaningCrescent3 } from 'react-icons/wi';
 import './css/App.css';
 
 function App() {
-    if (JSON.parse(window.localStorage.getItem('theme')!) === 'dark') {
-        window.localStorage.removeItem('theme');
-    }
-
     let defaultTheme = false;
-    if (window.localStorage.getItem('theme') !== null) {
-        defaultTheme = JSON.parse(window.localStorage.getItem('theme')!);
+    if (window.localStorage.getItem('isDarkTheme') !== null) {
+        defaultTheme = JSON.parse(window.localStorage.getItem('isDarkTheme')!);
     }
     const [isDarkTheme, setDarkTheme] = useState(defaultTheme);
 
     const changeTheme = () => {
         setDarkTheme(!isDarkTheme);
-        window.localStorage.setItem('theme', JSON.stringify(!isDarkTheme));
+        window.localStorage.setItem('isDarkTheme', JSON.stringify(!isDarkTheme));
     };
 
     const themeVariants = {
@@ -42,8 +38,7 @@ function App() {
             <About />
             <Projects />
             <Contact />
-            <Footer />
-
+            <Footer />|
             <div className='fixed-top'>
                 <AnimatePresence exitBeforeEnter>
                     {!isDarkTheme ? (
