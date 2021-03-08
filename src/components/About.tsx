@@ -4,8 +4,10 @@ import '../css/About.css';
 const About: FC = () => {
     return (
         <div className='container my-5 About d-grid justify-content-center'>
-            <h2 className='section-title'>About</h2>
-            <div className='About-content'>
+            <h2 data-aos='fade-up' className='section-title'>
+                About
+            </h2>
+            <div data-aos='fade-up' className='About-content'>
                 <p>
                     I'm a third year student of the Software Development and Network Engineering
                     COOP program at Sheridan College, with a high overall GPA.

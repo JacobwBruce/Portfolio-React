@@ -1,14 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import About from './components/About';
 import Masthead from './components/Masthead';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Projects from './components/Projects';
-import { AnimatePresence, motion, useViewportScroll } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { WiDaySunny, WiMoonWaningCrescent3 } from 'react-icons/wi';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 import './css/App.css';
 
 function App() {
+    useEffect(() => {
+        Aos.init({ duration: 1000 });
+    }, []);
+
     let defaultTheme = false;
     if (window.localStorage.getItem('isDarkTheme') !== null) {
         defaultTheme = JSON.parse(window.localStorage.getItem('isDarkTheme')!);
